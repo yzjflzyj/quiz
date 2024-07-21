@@ -1,9 +1,13 @@
 
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.LinkedList;
 
 public class RemoveRepeatChar {
     public static String removeConsecutiveChars(String s) {
+        if (StringUtils.isEmpty(s)) {
+            return s;
+        }
         LinkedList<Character> stack = new LinkedList<>();
         char[] chars = s.toCharArray();
         char pre = chars[0];
