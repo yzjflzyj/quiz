@@ -26,7 +26,7 @@ public class RemoveRepeatChar {
         while (!stack.isEmpty()) {
             result.append(stack.pop());
         }
-        return result.toString();
+        return result.reverse().toString();
     }
 
     private static void removeChar(LinkedList<Character> stack, char pre) {
@@ -35,6 +35,7 @@ public class RemoveRepeatChar {
             stack.pop();
             count++;
         }
+        // one or two times,recover the stack
         if (count == 1) {
             stack.push(pre);
         }
