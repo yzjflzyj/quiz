@@ -35,6 +35,7 @@ public class RemoveRepeatChar {
             stack.pop();
             count++;
         }
+        // one or two times,recover the stack
         if (count == 1) {
             stack.push(pre);
         }
